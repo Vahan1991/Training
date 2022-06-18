@@ -121,3 +121,9 @@ const output2 = `
 console.log(output2)
 
 
+
+
+let string = 'Plumbus'
+let count = 10000
+
+string.repeat(count);

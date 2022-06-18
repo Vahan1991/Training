@@ -118,7 +118,6 @@ console.log(myArr)
 // // expected output: Array [2, 4, 6]
 
 
-console.log('================================================')
 //11) includes()
 const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
 console.log(fruits3.includes("Mango"));
@@ -127,23 +126,146 @@ const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
 console.log(fruits4.includes("xxxxxx", 3));
 
 
+// 12) indexOf()
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let index = fruits.indexOf("Apple");
+let index2 = fruits.indexOf("Apple", 3);
+console.log(index, index2)
 
-// // map()
-// const numbers = [4, 9.4, 16, 25];
-// //const newArr = numbers.map(Math.sqrt)
-// const newArr = numbers.map(Math.round)
-// console.log(newArr)
 
-// const numbers2 = [65, 44, 12, 4];
-// //const newArr2 = numbers2.map(myFunction)
-// const newArr2 = numbers2.map(x => x * 2)
-// console.log(newArr2)
+// 13) isArray()
+const fru = ["Banana", "Orange", "Apple", "Mango"];
+let result2 = Array.isArray(fru);
+console.log(result2)
 
-// function myFunction(num) {
-//   return num * 10;
-// }
 
-// console.log(myFunction(10))
+// 14) join()
+const fru2 = ["Banana", "Orange", "Apple", "Mango"];
+let text2 = fru.join();
+let text3 = fru.join(' + ');
+console.log(text3)
 
+
+
+// 15) keys()
+const fruits_2 = ["Banana", "Orange", "Apple", "Mango"];
+// const keys = fruits_2.keys();
+const keys = Object.keys(fruits_2);
+
+let text_2 = "";
+for (let x of keys) {
+  text_2 += x + ">";
+  console.log(text_2)
+}
+
+
+// 16) lastIndexOf()
+const fruits_3 = ["Orange", "Apple", "Orange", "Apple", "Mango", "Apple2", "Mango"];
+let index_2 = fruits_3.lastIndexOf("Apple");
+console.log(index_2)
+
+
+// 17) length
+const fruits_4 = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits_4.length;
+
+// const fruits_4 = ["Banana", "Orange", "Apple", "Mango"];
+// let length = fruits_4.length = 2;
+console.log(length)
+
+
+// 18) map()
+const numbers = [4, 9.4, 16, 25];
+//const newArr = numbers.map(Math.sqrt)
+const newArr = numbers.map(Math.round)
+console.log(newArr)
+
+const numbers2 = [65, 44, 12, 4];
+//const newArr2 = numbers2.map(myFunction)
+const newArr2 = numbers2.map(x => x * 2)
+console.log(newArr2)
+
+function myFunction(num) {
+  return num * 10;
+}
+
+console.log(myFunction(10))
+
+
+
+// 19) pop()
+const fruits_5 = ["Banana", "Orange", "Apple", "Mango"];
+fruits_5.pop();
+
+console.log(fruits_5)
+
+
+// 20) prototype
+Array.prototype.myUseCase = function() {
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i].toUpperCase();
+  }
+};
+var fruits_6 = ["Banana", "Orange", "Apple", "Mango"];
+fruits_6.myUseCase();
+console.log(fruits_6)
+
+
+// 21) push()
+const fruits_7 = ["Banana", "Orange", "Apple", "Mango"];
+//fruits_7.push("Kiwi");
+fruits_7.push("Kiwi", "Lemon");
+console.log(fruits_7)
+
+
+// 22) reduce()
+const numbers_2 = [175, 50, 25];
+
+let f = numbers_2.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+
+const numbers_8 = [15.5, 2.3, 1.1, 4.7];
+
+let f2 = numbers_8.reduce(getSum, 0);
+
+function getSum(total, num) {
+  return total + Math.round(num);
+}
+
+// console.log(f)
+console.log(f2)
+
+
+
+// 23) reduceRight() 
+const numbers_9 = [175, 50, 25];
+
+let f3 = numbers_9.reduceRight(myFunc2);
+
+function myFunc2(total2, num2) {
+  return total2 - num2;
+}
+
+
+const numbers_10 = [2, 45, 30, 100];
+let f4 = numbers_10.reduceRight(getSum2);
+
+function getSum2(total3, num3) {
+  return total3 - num3;
+}
+
+// console.log(f3)
+console.log(f4)
+
+
+// 24) reverse() 
+console.log('================================================') 
+const fruits_11 = ["Banana", "Orange", "Apple", "Mango"];
+fruits_11.reverse();
+console.log(fruits_11)
 
 
